@@ -1,0 +1,59 @@
+algoritmo "Aula6Ex4_NumMaiorMenor"
+// Função :
+// Autor :
+// Data : 23/04/2025
+// Seção de Declarações 
+var
+
+ cont: inteiro
+ num, maior, menor: inteiro
+
+inicio
+
+   //Faça uma função que receba 5 números inteiros e ao final mostre quem é o maior e o menor número informado.
+   //O menor e o maior número devem ser retornados para o programa principal para, então, serem mostrados.
+
+  funcao fMaior (num, cont: inteiro): inteiro
+  
+     inicio
+    
+         se (cont = 1) entao
+            maior <- num
+         senao
+
+           se(num >= maior) entao
+              maior <- num
+           fimse
+         fimse
+        
+         retorne maior
+  fimfuncao
+  
+ funcao fMenor(num, cont: inteiro): inteiro
+
+      inicio
+         
+         se (cont = 1) entao
+            menor <- num
+         senao
+         
+           se(num <= menor)  entao
+              menor <- num
+           fimse
+         fimse
+         
+         retorne menor
+fimfuncao
+
+para cont <- 1 ate 5 faca
+     escreva ("Informe o primeiro número: ")
+     leia (num)
+
+     maior <- fMaior(num, cont)
+     menor <- fMenor (num, cont)
+fimpara
+
+     escreval ("O maior número é: ", maior)
+     escreval ("O menor número é: ", menor)
+
+fimalgoritmo

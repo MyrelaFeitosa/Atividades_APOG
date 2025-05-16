@@ -1,0 +1,56 @@
+algoritmo "Aula6_Ex3_OperacoesAritmeticas"
+// Função :
+// Autor :
+// Data : 23/04/2025
+// Seção de Declarações 
+var
+
+  num1, num2: inteiro
+  operacao: literal
+
+inicio
+
+   //Construir uma função em um algoritmo que receba 2 números inteiros e qual operação matemática
+   //será realizada: (+) Adição, (-)Subtração, (*) Multiplicação e (/) Divisão.
+   //Ao final mostrar o resultado como parâmetro de retorno do corpo do algoritmo.
+
+   funcao Calculos_Aritmeticos(num1, num2: inteiro; operacao: literal): real
+      var
+         resultado: real
+      inicio
+      
+         escolha (operacao)
+             caso "+"
+                resultado <- num1 + num2
+                
+             caso "-"
+                resultado <- num1 - num2
+                
+             caso "*"
+                resultado <- num1 * num2
+                
+             caso "/"
+                resultado <- num1 / num2
+                
+             outrocaso
+                escreval ("Opção Inválida!")
+         fimescolha
+         
+         retorne resultado
+   fimfuncao
+   
+   escreval ("Informe o primeiro número: ")
+   leia (num1)
+   escreval ("Informe o segundo número: ")
+   leia (num2)
+   
+   escreval("Informe a operação desejada: ")
+   escreval("(+) Adição")
+   escreval("(-) Subtração")
+   escreval("(*) Multiplicação")
+   escreval("(/) Divisão")
+   leia(operacao)
+
+   escreval("O resultado é: ", calculos_Aritmeticos(num1, num2, operacao))
+
+fimalgoritmo
